@@ -33,7 +33,7 @@ final class GooglePlayAnalytics implements JsonSerializable
 
     /**
      * Identifies the advertiser, site, publication, etc. that is sending traffic to your property,
-     * for example: google, 4, billboard.
+     * for example: google, newsletter4, billboard.
      *
      * @see https://support.google.com/analytics/answer/1033863#parameters
      */

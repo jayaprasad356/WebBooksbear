@@ -2,6 +2,72 @@
 
 ## [Unreleased]
 
+## [5.19.0] - 2021-05-09
+* Added the `startAfter` and `endBefore` filters for the Realtime Database. At the moment they
+  don't seem to have an effect on the returned results (just as if they didn't exist); it's
+  unclear if the implementation is incorrect or if the REST API doesn't support the new
+  filters yet. If you see why it's not working or if it _does_ work for you, please
+  let me know.
+### Changed
+* `CloudMessage::withData()` allowed the message data to be empty, resulting in the Firebase
+  API rejecting the message. If the message data is empty, the field is now removed before
+  sending the message.
+  ([#591](https://github.com/kreait/firebase-php/issues/591))
+
+## [5.18.0] - 2021-04-19
+### Added
+* Added support for more public keys from Google that ID Tokens could have been signed with. 
+
+## [5.17.1] - 2021-04-13
+### Fixed
+* [5.16.0] introduced a check for reserved words and prefixes in FCM Data Payloads - although stated
+  otherwise in the official documentation, the keyword `notification` is _not_ be rejected by the
+  Firebase API, causing projects to break that used it and updated the SDK. This release removes
+  the check for this key.
+
+## [5.17.0] - 2021-03-21
+### Added
+* Helper methods to specify a message priority
+  ([Documentation](https://firebase-php.readthedocs.io/en/latest/cloud-messaging.html#message-priority))
+### Changed
+* `giggsey/libphonenumber-for-php` is now an _optional_ dependency instead of a required one. It can be used
+  to validate a phone number before sending it to the Firebase Servers, where an invalid phone number will
+  be rejected anyway. If you want to continue using the "pre"-validation, please add the library to your
+  project's direct dependencies, e.g. with `composer require "giggsey/libphonenumber-for-php:^8.9"`.
+  ([#577](https://github.com/kreait/firebase-php/discussions/577))
+
+## [5.16.0] - 2021-03-07
+### Fixed
+* It was not possible to send password reset emails to users belonging to a tenant. 
+  ([#573](https://github.com/kreait/firebase-php/issues/573))
+### Changed
+* FCM Data Payloads are now checked for reserved words and prefixes, according to the
+  [FCM Data Messages Documentation](https://firebase.google.com/docs/cloud-messaging/concept-options#data_messages).
+  Reserved words include "from", "notification," "message_type", or any word starting with "google" or "gcm."
+  Instead of throwing an exception after the FCM API has rejected a message, the exception will no be thrown 
+  _before_ sending the message. 
+  ([#574](https://github.com/kreait/firebase-php/issues/574))
+
+## [5.15.0] - 2021-03-01
+### Added
+* All main components of the SDK are now based on Interfaces in the `Kreait\Firebase\Contract` namespace. 
+  This should enable projects implementing the SDK to mock the components more easily (Note: the
+  `Kreait\Firebase\Factory` class is not provided as a contract, and you should not rely 
+  on it in your tests).
+  
+  The added contracts are:
+  * `\Kreait\Firebase\Contract\Auth`
+  * `\Kreait\Firebase\Contract\Database`
+  * `\Kreait\Firebase\Contract\DynamicLinks`
+  * `\Kreait\Firebase\Contract\Firestore`
+  * `\Kreait\Firebase\Contract\RemoteConfig`
+  * `\Kreait\Firebase\Contract\Storage`
+
+### Changed
+* More explanatory error messages when
+  * a requested Realtime Database instance could not be reached
+  * an FCM target device is not known to the current project
+
 ## [5.14.1] - 2020-12-31
 ### Fixed
 * Fixed handling of rejected promises in the App Instance API Client
@@ -182,7 +248,13 @@ to upgrade from a 4.x release to 5.0 without changes to your code.**
 * Support for PHP `<7.2`
 * Deprecated methods and classes
 
-[Unreleased]: https://github.com/kreait/firebase-php/compare/5.14.1...HEAD
+[Unreleased]: https://github.com/kreait/firebase-php/compare/5.19.0...HEAD
+[5.19.0]: https://github.com/kreait/firebase-php/compare/5.18.0...5.19.0
+[5.18.0]: https://github.com/kreait/firebase-php/compare/5.17.1...5.18.0
+[5.17.1]: https://github.com/kreait/firebase-php/compare/5.17.0...5.17.1
+[5.17.0]: https://github.com/kreait/firebase-php/compare/5.16.0...5.17.0
+[5.16.0]: https://github.com/kreait/firebase-php/compare/5.15.0...5.16.0
+[5.15.0]: https://github.com/kreait/firebase-php/compare/5.14.1...5.15.0
 [5.14.1]: https://github.com/kreait/firebase-php/compare/5.14.0...5.14.1
 [5.14.0]: https://github.com/kreait/firebase-php/compare/5.13.0...5.14.0
 [5.13.0]: https://github.com/kreait/firebase-php/compare/5.12.0...5.13.0
