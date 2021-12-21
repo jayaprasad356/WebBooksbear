@@ -24,6 +24,8 @@ class Controller extends BaseController {
     }
 
     public function init($reload) {
+        Cache::put('pincode', '0');
+        Cache::put('pincode_no', '0');
         $lmt = Cache::get('lmt', 0);
         if ($reload || $lmt + config('ekart.reload_settings') < time()) {
             $this->all_data();

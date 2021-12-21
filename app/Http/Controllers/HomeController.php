@@ -11,6 +11,8 @@ use Kreait\Firebase\Factory;
 class HomeController extends Controller {
 
     public function index() {
+        Cache::put('pincode', '0');
+        Cache::put('pincode_no', '0');
 
         $title = "Ecommerce | Full Store Website";
 

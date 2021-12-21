@@ -175,7 +175,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        @if(isset($data['data']['code_list']) && is_array($data['data']['code_list']['data']) && count($data['data']['code_list']['data']))
+                                        @if(isset($data['data']['code_list']['data']) && is_array($data['data']['code_list']['data']) && count($data['data']['code_list']['data']))
                                         @if(isset($data['data']['code_list']['data'][0]->id))
                                         <div class="col-lg-4 col-md-4 col-12 ">
                                             <div class="discount-code-wrapper coupan__wrapper">

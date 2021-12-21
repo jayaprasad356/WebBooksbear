@@ -16,6 +16,8 @@ class CheckoutController extends CartController {
 
             return redirect()->route('login');
         } else {
+            Cache::put('pincode', '0');
+            Cache::put('pincode_no', '0');
 
             $address = session()->get('checkout-address');
 
@@ -73,6 +75,7 @@ class CheckoutController extends CartController {
                             ->put('checkout-address', $addressExist);
 
                     $address = session()->get('checkout-address');
+                    //dd($data);
 
                     $this->html('checkout_summary', ['data' => $data, 'address' => $address, 'carticon' => 0, 'title' => __('msg.checkout_summary')]);
                 }
@@ -254,8 +257,10 @@ class CheckoutController extends CartController {
         $msg = msg('no_product_checkount');
 
         $return = false;
+        
 
         if (isset($cart['cart']) && is_array($cart['cart']) && count($cart['cart'])) {
+            
 
             $data[api_param('place-order')] = api_param('get-val');
 
@@ -330,6 +335,7 @@ class CheckoutController extends CartController {
                 case 'cod':
 
                     $return = $this->checkout_cod($data);
+                    
 
                     break;
 

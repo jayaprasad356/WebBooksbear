@@ -17,6 +17,8 @@ class PincodeController extends Controller {
         Cache::put('pincode', $pincode_id);
 
         $cache_pincode_id = Cache::get('pincode');
+        Cache::put('pincode', '0');
+        Cache::put('pincode_no', '0');
 
         $pincode_no = $this->post('locations', ['data' => ['get_pincodes' => '1', 'id' => $cache_pincode_id]]);
 

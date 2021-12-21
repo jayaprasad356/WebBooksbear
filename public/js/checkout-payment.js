@@ -53,19 +53,13 @@ $(document).ready(function(){
         var availablePaymentMethods = ["cod", "paypal", "payumoney", "payumoney-bolt", "razorpay", "stripe", "midtrans", "flutterwave", "paystack", "paytm", "sslecommerz", "bank_transfer"]
         var paymentMethod = $("input[type=radio][name=payment_method]:checked").val();
 
-        if($("input[type=hidden][name=deliverDay]").val() != ""){
-            if($("input[type=hidden][name=deliveryTime]").val() != ""){
+       
                 if(availablePaymentMethods.indexOf(paymentMethod) > -1){
                     $("#orderConfirm").modal('show');
                 }else{
                     $("#paymentError").show();
                 }
-            }else{
-                $("#timeError").show();
-            }
-        }else{
-            $("#dateError").html('Select Suitable Delivery Date').show();
-        }
+            
     });
     $("#wallet").on("change", function(e){
         e.preventDefault();

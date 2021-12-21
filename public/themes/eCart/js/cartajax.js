@@ -610,10 +610,10 @@ $(document).ready(function () {
                                 .attr("data-qty", qtyincrease)
                                 .change();
                         html += '<tr class="cart1price">' + '<td class="text-end checktrash cart">';
-                        if (e.item[0].is_item_deliverable == false && response.is_pincode == true) {
-                            html += '<p class="deliver_notice">Not Deliverable for ' + response.pincode_no + " </p>";
-                            ready_to_checkout = "0";
-                        }
+                        // if (e.item[0].is_item_deliverable == false && response.is_pincode == true) {
+                        //     html += '<p class="deliver_notice">Not Deliverable for ' + response.pincode_no + " </p>";
+                        //     ready_to_checkout = "0";
+                        // }
 
                         html +=
                                 '<figure class="itemside">' +

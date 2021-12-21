@@ -10,8 +10,11 @@ use function GuzzleHttp\json_encode;
 use Redirect;
 
 class CartController extends Controller {
+    
 
     public function index() {
+        Cache::put('pincode', '0');
+        Cache::put('pincode_no', '0');
 
         if (isLoggedIn()) {
 
@@ -474,8 +477,11 @@ class CartController extends Controller {
         $data['order_from'] = '1';
 
         $response = $this->post('order-process', ['data' => $data, 'place_order' => 1]);
+        
+        
 
         if (!($response['error'])) {
+            
 
             if ($clearCart == true) {
 
@@ -499,6 +505,7 @@ class CartController extends Controller {
     public function checkout_cod($data) {
 
         $response = $this->order_placed($data);
+        //dd($response);
 
         if ($response['success']) {
 

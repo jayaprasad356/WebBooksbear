@@ -2,6 +2,7 @@
 
 function getJSON($string) {
     $j = json_decode($string);
+    //dd($j);
     return (json_last_error() == JSON_ERROR_NONE) ? $j : array('error' => true, 'message' => 'Invalid JSON Response');
 }
 

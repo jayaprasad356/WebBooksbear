@@ -172,7 +172,7 @@
                             </div>
                             <div class="col-lg-10 col-md-6 col-sm-7 col-12">
                                 <div class="content_right_info">
-                                    <div class="col d-flex justify-content-center pin__code">
+                                    <!-- <div class="col d-flex justify-content-center pin__code">
                                         @if(isset($data['carticon']) && $data['carticon'] == 0 )
                                             <button type="button" class="btn hide" data-bs-toggle="modal" data-bs-target="#pincodeModal">
                                                 <em class="fas fa-map-marker-alt">&nbsp;{{__('msg.deliver to')}} {{ Cache::get('pincode_no')??'All' }}</em>
@@ -182,7 +182,7 @@
                                                 <em class="fas fa-map-marker-alt">&nbsp;{{__('msg.deliver to')}} {{ Cache::get('pincode_no')??'All' }}</em>
                                             </button>
                                         @endif
-                                    </div>
+                                    </div> -->
 
                                     <div class="col-8 justify-content-center mobile_screen_none">
                                         <div class="searchbar_content">
