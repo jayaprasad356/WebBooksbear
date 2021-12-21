@@ -253,6 +253,9 @@
                                                     <div class="order-bill-slip">
                                                         <a href="<?php echo e(route('order-track-item', $w->id ?? 0)); ?>" class="bill-btn hover-btn"><?php echo e(__('msg.view_details')); ?></a>
                                                     </div>
+                                                    <div class="order-bill-slip">
+                                                        <a href="https://booksbear.shiprocket.co" target="_blank" class="bill-btn hover-btn"><?php echo e(__('msg.detailed_tracking')); ?></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

@@ -122,7 +122,7 @@
                                 </div>
                                 </form>
                             </div>
-                            <div class="col-lg-6 col-md-6 product__details">
+                            <!-- <div class="col-lg-6 col-md-6 product__details">
                                 <ul class="top_bar_left mb-3">
                                     <li class="price-marquee">
                                         @if(Cache::has('pincode_no'))
@@ -168,7 +168,7 @@
                                     </form>
                                     <br/>
                                 </div>
-                            </div>
+                            </div> -->
                             @else
                             @endif
                             <div class="priduct_social">

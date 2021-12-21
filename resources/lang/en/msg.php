@@ -101,6 +101,7 @@ return [
     'final_total' => 'Final Total',
     'other_details' => 'Other Details',
     'view_details' => 'View Details',
+    'detailed_tracking' => 'Detailed tracking',
     'order_status' => 'Order Status',
     'status' => 'Status',
     'return_item' => 'Return Item',
@@ -234,6 +235,7 @@ return [
     'copyright' => 'Copyright',
     'made' => 'Made By',
     'wrteam' => 'WRTeam',
+    'companyname' => 'BooksBear | A company by A&A',
     'available' => 'Available In:',
     'no_timeslot_available' => 'No Timeslot Available. Please Select Another Date',
     'select_suitable_delivery_date' => 'Select Suitable Delivery Date',
@@ -509,7 +511,7 @@ return [
 
     'Instruction' => 'Instruction!',
 
-    'bank_detail_instruction1' => 'Make your payment directly into our account. Your order will not further proceed until the funds have cleared in our account.',
+    'bank_detail_instruction1' => '₹50 extra charges on COD order below ₹1000, pay via any online mode and save ₹50 and shop above ₹1500 and enjoy free delivery',
 
     'bank_detail_instruction2' => 'You have to send your payment receipt from order details page then admin will verify that.',
     

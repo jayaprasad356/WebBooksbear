@@ -139,8 +139,19 @@ class Controller extends BaseController {
             echo view("themes.$theme.$view", compact('theme', 'data'));
 
             if ($view == "home") {
-                echo view("themes.$theme.parts.seller");
+                echo view("themes.$theme.parts.categories");
                 $this->all_data();
+
+                if (Cache::has('sections') && is_array(Cache::get('sections')) && count(Cache::get('sections'))) {
+                    foreach (Cache::get('sections') as $s) {
+                        if ($s->style == "style_3") {
+
+                            echo view("themes.$theme.parts." . $s->style, compact('theme', 's', 'view'));
+                        }
+                    }
+                }
+                echo view("themes.$theme.parts.seller");
+                
                 if (Cache::has('sections') && is_array(Cache::get('sections')) && count(Cache::get('sections'))) {
                     foreach (Cache::get('sections') as $s) {
                         if ($s->style == "style_1" && !empty($s)) {
@@ -159,17 +170,9 @@ class Controller extends BaseController {
                     }
                 }
 
-                echo view("themes.$theme.parts.categories");
-
-                if (Cache::has('sections') && is_array(Cache::get('sections')) && count(Cache::get('sections'))) {
-                    foreach (Cache::get('sections') as $s) {
-                        if ($s->style == "style_3") {
-
-                            echo view("themes.$theme.parts." . $s->style, compact('theme', 's', 'view'));
-                        }
-                    }
-                }
+                
             }
+            //echo view("themes.$theme.parts.collaboration");
 
             echo view("themes.$theme.common.footer");
         }

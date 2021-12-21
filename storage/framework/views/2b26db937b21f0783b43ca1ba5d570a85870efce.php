@@ -1,6 +1,81 @@
 
 
-
+<!-- testimonials -->
+<section class="testimonial-area my-2 my-md-3">
+      <div class="container-fluid">
+         <div class="px-2 py-4 px-md-4 py-md-3 bg-white shadow rounded mb-3">
+         <div class="section-title-2">
+            <h2><?php echo e(__('msg.Testimonials')); ?></h2>
+            <span class="animate-border mb-4"></span>
+         </div>
+         <div class="testimonial-active owl-carousel">
+            <div class="inner-testimonial">
+               <div class="client-content">
+                  <p><?php echo e(__('msg.testimonial_description1')); ?></p>
+               </div>
+               <div class="client-info">
+                  <img  class="lazy" data-original="<?php echo e(theme('images/testimonial-1.png')); ?>" alt="testimonial">
+                  <h5><?php echo e(__('msg.testimonial_name1')); ?></h5>
+                  <span><?php echo e(__('msg.Deginer')); ?></span>
+               </div>
+            </div>
+            <div class="inner-testimonial">
+               <div class="client-content">
+                  <p><?php echo e(__('msg.testimonial_description2')); ?></p>
+               </div>
+               <div class="client-info">
+                  <img class="lazy" data-original="<?php echo e(theme('images/testimonial-2.png')); ?>" alt="testimonial">
+                  <h5><?php echo e(__('msg.testimonial_name2')); ?></h5>
+                  <span><?php echo e(__('msg.Developer')); ?></span>
+               </div>
+            </div>
+            <div class="inner-testimonial">
+               <div class="client-content">
+                  <p><?php echo e(__('msg.testimonial_description1')); ?></p>
+               </div>
+               <div class="client-info">
+                  <img  class="lazy" data-original="<?php echo e(theme('images/testimonial-3.png')); ?>" alt="testimonial">
+                  <h5><?php echo e(__('msg.testimonial_name1')); ?></h5>
+                  <span><?php echo e(__('msg.Customer')); ?></span>
+               </div>
+            </div>
+         </div>
+         </div>
+      </div>
+   </section>
+   <!-- partners -->
+   <section class="brand-logo-area my-2 my-md-3">
+      <div class="container-fluid">
+         <div class="px-2 py-4 px-md-4 py-md-3 bg-white shadow rounded mb-3">
+         <div class="heading heading-center mb-5">
+            <h2><?php echo e(__('msg.Collabration')); ?></h2>
+            <span class="animate-border"></span>
+         </div>
+         <div class="brand-logo-padding bg-light-gray">
+            <div class="brand-logo-active-2 owl-carousel">
+               <div class="single-brand-logo">
+                  <img class="lazy" data-original="<?php echo e(theme('images/brandpartners.png')); ?>" alt="">
+               </div>
+               <div class="single-brand-logo">
+                  <img class="lazy" data-original="<?php echo e(theme('images/brandpartners.png')); ?>" alt="">
+               </div>
+               <div class="single-brand-logo">
+                  <img class="lazy" data-original="<?php echo e(theme('images/brandpartners.png')); ?>" alt="">
+               </div>
+               <div class="single-brand-logo">
+                  <img class="lazy" data-original="<?php echo e(theme('images/brandpartners.png')); ?>" alt="">
+               </div>
+               <div class="single-brand-logo">
+                  <img class="lazy" data-original="<?php echo e(theme('images/brandpartners.png')); ?>" alt="">
+               </div>
+               <div class="single-brand-logo">
+                  <img class="lazy" data-original="<?php echo e(theme('images/brandpartners.png')); ?>" alt="">
+               </div>
+            </div>
+         </div>
+         </div>
+      </div>
+   </section>
 <section class="subscribe-news">
    <div class="newsletter">
       <div class="container-fluid">
@@ -75,8 +150,9 @@
                      <ul class="collapse dont-collapse-sm link">
                         <li><a href="<?php echo e(route('page', 'privacy-policy')); ?>"><?php echo e(__('msg.privay_policy')); ?></a></li>
                         <li><a href="<?php echo e(route('page', 'tnc')); ?>"><?php echo e(__('msg.terms_and_conditions')); ?></a></li>
-                        <li><a href="<?php echo e(route('page', 'refund-policy')); ?>"><?php echo e(__('msg.refund_policy')); ?></a></li>
-                        <li><a href="<?php echo e(route('page', 'shipping-policy')); ?>"><?php echo e(__('msg.shipping_policy')); ?></a></li>
+                        <!-- <li><a href="<?php echo e(route('page', 'refund-policy')); ?>"><?php echo e(__('msg.refund_policy')); ?></a></li> -->
+                        <li><a href="https://booksbear.in/return-refund" target="_blank"><?php echo e(__('msg.refund_policy')); ?></a></li>
+                        <!-- <li><a href="<?php echo e(route('page', 'shipping-policy')); ?>"><?php echo e(__('msg.shipping_policy')); ?></a></li> -->
                         <li><a href="<?php echo e(route('page', 'delivery-returns-policy')); ?>"><?php echo e(__('msg.delivery_returns')); ?></a></li>
                      </ul>
                   </div>
@@ -159,7 +235,7 @@
                   <?php endif; ?>
                </div>
                <div class="col-md-4 col-12 ">
-                  <div class="copy-right "><?php echo e(__('msg.copyright')); ?> &copy; <?php echo e(date('Y')); ?> <?php echo e(__('msg.made')); ?> <a href="https://wrteam.in/" target="_blank" rel="noopener noreferrer"><?php echo e(__('msg.wrteam')); ?>.</a>
+                  <div class="copy-right "><?php echo e(__('msg.copyright')); ?> &copy; <?php echo e(date('Y')); ?> <?php echo e(__('msg.made')); ?> <a href="https://booksbear.in/" target="_blank" rel="noopener noreferrer"><?php echo e(__('msg.companyname')); ?>.</a>
                   </div>
                </div>
                <div class="col-md-4 col-12">
