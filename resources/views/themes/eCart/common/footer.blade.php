@@ -152,7 +152,7 @@
                         <!-- <li><a href="{{ route('page', 'refund-policy') }}">{{ __('msg.refund_policy')}}</a></li> -->
                         <li><a href="https://booksbear.in/return-refund" target="_blank">{{ __('msg.refund_policy')}}</a></li>
                         <!-- <li><a href="{{ route('page', 'shipping-policy') }}">{{ __('msg.shipping_policy')}}</a></li> -->
-                        <li><a href="{{ route('page', 'delivery-returns-policy') }}">{{ __('msg.delivery_returns')}}</a></li>
+                        <li><a href="https://booksbear.shiprocket.co" target="_blank">{{ __('msg.track_order')}}</a></li>
                      </ul>
                   </div>
                </div>

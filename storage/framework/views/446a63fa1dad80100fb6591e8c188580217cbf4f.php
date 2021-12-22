@@ -50,7 +50,7 @@
       </div>
    </section>
    <!-- feature -->
-   <section class="feature-area my-2 my-md-3 section-padding-3">
+   <!-- <section class="feature-area my-2 my-md-3 section-padding-3">
       <div class="container-fluid">
          <div class="px-2 py-4 px-md-4 py-md-3 bg-white shadow rounded mb-3">
          <div class="row">
@@ -93,9 +93,9 @@
          </div>
          </div>
       </div>
-   </section>
+   </section> -->
    <!-- our team -->
-   <section class="teams my-2 my-md-3">
+   <!-- <section class="teams my-2 my-md-3">
       <div class="container-fluid">
          <div class="px-2 py-4 px-md-4 py-md-3 bg-white shadow rounded mb-3">
          <div class="heading heading-center mb-3">
@@ -246,7 +246,7 @@
          </div>
          </div>
       </div>
-   </section>
+   </section> -->
    
 </div>
 <?php /**PATH C:\xampp\htdocs\webbooksbear\resources\views/themes/eCart/about.blade.php ENDPATH**/ ?>

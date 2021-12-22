@@ -153,7 +153,7 @@
                         <!-- <li><a href="<?php echo e(route('page', 'refund-policy')); ?>"><?php echo e(__('msg.refund_policy')); ?></a></li> -->
                         <li><a href="https://booksbear.in/return-refund" target="_blank"><?php echo e(__('msg.refund_policy')); ?></a></li>
                         <!-- <li><a href="<?php echo e(route('page', 'shipping-policy')); ?>"><?php echo e(__('msg.shipping_policy')); ?></a></li> -->
-                        <li><a href="<?php echo e(route('page', 'delivery-returns-policy')); ?>"><?php echo e(__('msg.delivery_returns')); ?></a></li>
+                        <li><a href="https://booksbear.shiprocket.co" target="_blank"><?php echo e(__('msg.track_order')); ?></a></li>
                      </ul>
                   </div>
                </div>

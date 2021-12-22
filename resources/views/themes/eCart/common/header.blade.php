@@ -137,6 +137,18 @@
                                         <a href="{{ route('shop') }}">{{__('msg.shop')}}</a>
                                     </li>
                                     <li class="menu-item-has-children">
+                                        <a href="#">{{__('msg.features')}}</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{{__('msg.sell_link')}}" target="_blank" >{{__('msg.sell')}}</a></li>
+                                            <li><a href="{{__('msg.rent_link')}}" target="_blank" >{{__('msg.rent')}}</a></li>
+                                            <li><a href="{{__('msg.donate_link')}}" target="_blank" >{{__('msg.donate')}}</a></li>
+                                            <li><a href="{{__('msg.req_books_link')}}" target="_blank" >{{__('msg.req_books')}}</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="{{__('msg.win_rewards_link')}}" target="_blank" class="{{ __('msg.win_rewards_link') ? 'active' : '' }}"> {{__('msg.win_rewards')}}</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
                                         <a href="#">{{__('msg.more')}} </a>
                                         <ul class="sub-menu">
                                             <li><a href="{{ route('about') }}">{{__('msg.about us')}}</a></li>
@@ -573,12 +585,25 @@
                                                 <li class="mega_items_content"><a href="{{ route('shop') }}" class="{{ request()->is('shop') ? 'active' : '' }}">{{__('msg.shop')}}</a>
                                                 </li>
                                                 <li>
+                                                    <a>{{__('msg.features')}}<em class="fa fa-angle-down"></em></a>
+                                                    <ul class="sub_menu pages">
+                                                        <li><a href="{{__('msg.sell_link')}}" target="_blank" class="{{ __('msg.sell_link') ? 'active' : '' }}">{{__('msg.sell')}}</a></li>
+                                                        <li><a href="{{__('msg.rent_link')}}" target="_blank" class="{{ __('msg.rent_link') ? 'active' : '' }}">{{__('msg.rent')}}</a></li>
+                                                        <li><a href="{{__('msg.donate_link')}}" target="_blank" class="{{ __('msg.donate_link') ? 'active' : '' }}">{{__('msg.donate')}}</a></li>
+                                                        <li><a href="{{__('msg.req_books_link')}}" target="_blank" class="{{ __('msg.req_books_link') ? 'active' : '' }}">{{__('msg.req_books')}}</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="{{__('msg.win_rewards_link')}}" target="_blank" class="{{ __('msg.win_rewards_link') ? 'active' : '' }}"> {{__('msg.win_rewards')}}</a>
+                                                </li>
+                                                <li>
                                                     <a>{{__('msg.more')}}<em class="fa fa-angle-down"></em></a>
                                                     <ul class="sub_menu pages">
                                                         <li><a href="{{ route('about') }}" class="{{ request()->is('about') ? 'active' : '' }}">{{__('msg.about us')}}</a></li>
                                                         <li><a href="{{ route('page', 'faq') }}" class="{{ request()->is('page/contact') ? 'active' : '' }}">{{__('msg.faq')}}</a></li>
                                                     </ul>
                                                 </li>
+                                                
                                                 <li>
                                                     <a href="{{ route('contact') }}" class="{{ request()->is('contact') ? 'active' : '' }}"> {{__('msg.contact us')}}</a>
                                                 </li>

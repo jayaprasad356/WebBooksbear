@@ -125,13 +125,13 @@ $(document).ready(function () {
                         '" id="child_' +
                         response.product.id +
                         '">' +
-                        '<div class="product-variant1">' +
-                        '<div class="product-variant__label">Available in:</div>' +
+                    '<div class="product-variant1">' +
+                        '<div class="product-variant__label">Available in: All Pincode</div>' +
                         '<div class="btn-group-toggle variant" data-toggle="buttons">';
                 var firstSelected = "active";
                 var checked = "checked";
                 $.each(response.product.variants, function (i, e) {
-                    html += '<button class="btn product-variant__btn ' + firstSelected + '" data-id="' + response.product.id + '">' + e.measurement + " " + e.measurement_unit_name;
+                    html += '<button hidden class="btn product-variant__btn ' + firstSelected + '" data-id="' + response.product.id + '">' + e.measurement + " " + e.measurement_unit_name;
                     var tax_discounted_price = parseFloat(e.discounted_price) + parseFloat((e.discounted_price * response.product.tax_percentage) / 100);
                     var tax_mrp_price = parseFloat(e.price) + parseFloat((e.price * response.product.tax_percentage) / 100);
                     if (tax_discounted_price == 0) {
@@ -204,31 +204,7 @@ $(document).ready(function () {
                 }
 
                 html += '" data-id=' + response.product.id + "> </li>" + "</div>" + "</div>" + '<div class="product_meta">' + "</div>" + "</form>" + "</div>";
-                html += "<div class='col-lg-12 col-md-12'>" + "<ul class='top_bar_left mb-3'>" + "<li class='price-marquee'>";
-                if (response.is_pincode == true) {
-                    html += "<p>" + "<button type='button' class='btn btn-primary'>" + "<i class='fas fa-map-marker-alt'>&nbsp;<span class='pincode_msg'>Deliverable to:  " + response.pincode_no + "</span></i>" + "</button>" + "</p>";
-                } else {
-                    html += "<p>" + "<button type='button' class='btn btn-primary'>" + "<i class='fas fa-map-marker-alt'>&nbsp;<span class='pincode_msg'>Select a location to see product availability</span></i>" + "</button>" + "</p>";
-                }
-                html += "</li>" + "</ul>";
-                html += "</div>";
-                html +=
-                        "<div class='row'><div class='col-lg-6 col-12'>" +
-                        "<h6>Check Pincode</h6>" +
-                        "<form  method='POST' class='pincode_form'>" +
-                        '<input type="text" name="product_id" class="form-control" value="' +
-                        response.product.id +
-                        ' " hidden>' +
-                        '<input type="text" name="slug" class="form-control" value="' +
-                        response.product.slug +
-                        ' " hidden>' +
-                        '<div class="quick_deliver"><input type="text" name="pincode" class="form-control" id="pincode_no" placeholder="Enter a Pincode">' +
-                        '<button class="btn btn-primary" type="submit" name="submit">Apply</button></div>' +
-                        "</form>";
-
-                html += "</div></div>";
-
-                html += " </div>";
+                
 
                 $(".productmodaldetails").html(html);
                 jQuery(function () {

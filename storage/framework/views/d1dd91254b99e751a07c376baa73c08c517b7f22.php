@@ -139,6 +139,18 @@
                                         <a href="<?php echo e(route('shop')); ?>"><?php echo e(__('msg.shop')); ?></a>
                                     </li>
                                     <li class="menu-item-has-children">
+                                        <a href="#"><?php echo e(__('msg.features')); ?></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="<?php echo e(__('msg.sell_link')); ?>" target="_blank" ><?php echo e(__('msg.sell')); ?></a></li>
+                                            <li><a href="<?php echo e(__('msg.rent_link')); ?>" target="_blank" ><?php echo e(__('msg.rent')); ?></a></li>
+                                            <li><a href="<?php echo e(__('msg.donate_link')); ?>" target="_blank" ><?php echo e(__('msg.donate')); ?></a></li>
+                                            <li><a href="<?php echo e(__('msg.req_books_link')); ?>" target="_blank" ><?php echo e(__('msg.req_books')); ?></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo e(__('msg.win_rewards_link')); ?>" target="_blank" class="<?php echo e(__('msg.win_rewards_link') ? 'active' : ''); ?>"> <?php echo e(__('msg.win_rewards')); ?></a>
+                                    </li>
+                                    <li class="menu-item-has-children">
                                         <a href="#"><?php echo e(__('msg.more')); ?> </a>
                                         <ul class="sub-menu">
                                             <li><a href="<?php echo e(route('about')); ?>"><?php echo e(__('msg.about us')); ?></a></li>
@@ -585,12 +597,25 @@
                                                 <li class="mega_items_content"><a href="<?php echo e(route('shop')); ?>" class="<?php echo e(request()->is('shop') ? 'active' : ''); ?>"><?php echo e(__('msg.shop')); ?></a>
                                                 </li>
                                                 <li>
+                                                    <a><?php echo e(__('msg.features')); ?><em class="fa fa-angle-down"></em></a>
+                                                    <ul class="sub_menu pages">
+                                                        <li><a href="<?php echo e(__('msg.sell_link')); ?>" target="_blank" class="<?php echo e(__('msg.sell_link') ? 'active' : ''); ?>"><?php echo e(__('msg.sell')); ?></a></li>
+                                                        <li><a href="<?php echo e(__('msg.rent_link')); ?>" target="_blank" class="<?php echo e(__('msg.rent_link') ? 'active' : ''); ?>"><?php echo e(__('msg.rent')); ?></a></li>
+                                                        <li><a href="<?php echo e(__('msg.donate_link')); ?>" target="_blank" class="<?php echo e(__('msg.donate_link') ? 'active' : ''); ?>"><?php echo e(__('msg.donate')); ?></a></li>
+                                                        <li><a href="<?php echo e(__('msg.req_books_link')); ?>" target="_blank" class="<?php echo e(__('msg.req_books_link') ? 'active' : ''); ?>"><?php echo e(__('msg.req_books')); ?></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo e(__('msg.win_rewards_link')); ?>" target="_blank" class="<?php echo e(__('msg.win_rewards_link') ? 'active' : ''); ?>"> <?php echo e(__('msg.win_rewards')); ?></a>
+                                                </li>
+                                                <li>
                                                     <a><?php echo e(__('msg.more')); ?><em class="fa fa-angle-down"></em></a>
                                                     <ul class="sub_menu pages">
                                                         <li><a href="<?php echo e(route('about')); ?>" class="<?php echo e(request()->is('about') ? 'active' : ''); ?>"><?php echo e(__('msg.about us')); ?></a></li>
                                                         <li><a href="<?php echo e(route('page', 'faq')); ?>" class="<?php echo e(request()->is('page/contact') ? 'active' : ''); ?>"><?php echo e(__('msg.faq')); ?></a></li>
                                                     </ul>
                                                 </li>
+                                                
                                                 <li>
                                                     <a href="<?php echo e(route('contact')); ?>" class="<?php echo e(request()->is('contact') ? 'active' : ''); ?>"> <?php echo e(__('msg.contact us')); ?></a>
                                                 </li>

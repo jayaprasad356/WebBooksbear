@@ -89,11 +89,11 @@
                                     <input type="hidden" name="child_id" value='0' id="child_<?php echo e($data['product']->id); ?>">
 
                                     <div class="product-variant1">
-                                        <div class="product-variant__label"><?php echo e(__('msg.available')); ?></div>
+                                        <div class="product-variant__label"><?php echo e(__('msg.available')); ?> All Pincode</div>
                                         <div class="product-variant__list variant btn-group-toggle" data-toggle="buttons">
                                             <?php $firstSelected = true; ?>
                                             <?php $__currentLoopData = getInStockVarients($data['product']); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $v): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <button class="product-variant__btn pdp-btn product-variant__btn--active trim btn <?php echo e($firstSelected); ?>"  data-id="<?php echo e($data['product']->id); ?>" >
+                                            <button hidden class="product-variant__btn pdp-btn product-variant__btn--active trim btn <?php echo e($firstSelected); ?>"  data-id="<?php echo e($data['product']->id); ?>" >
                                                 <?php echo e(get_varient_name($v)); ?>
 
                                                 <input hidden type="radio" name="options" id="option<?php echo e($v->id); ?>" value="<?php echo e($v->id); ?>" data-id='<?php echo e($v->id); ?>' data-price='<?php $tax_discounted_price = get_price_varients($v)+(get_price_varients($v)*get_pricetax_varients($data['product']->tax_percentage)/100); print number_format($tax_discounted_price,2); ?> '

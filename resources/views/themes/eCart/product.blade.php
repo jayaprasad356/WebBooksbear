@@ -87,11 +87,11 @@
                                     <input type="hidden" name="child_id" value='0' id="child_{{ $data['product']->id }}">
 
                                     <div class="product-variant1">
-                                        <div class="product-variant__label">{{__('msg.available')}}</div>
+                                        <div class="product-variant__label">{{__('msg.available')}} All Pincode</div>
                                         <div class="product-variant__list variant btn-group-toggle" data-toggle="buttons">
                                             @php $firstSelected = true; @endphp
                                             @foreach(getInStockVarients($data['product']) as $v)
-                                            <button class="product-variant__btn pdp-btn product-variant__btn--active trim btn {{$firstSelected}}"  data-id="{{ $data['product']->id }}" >
+                                            <button hidden class="product-variant__btn pdp-btn product-variant__btn--active trim btn {{$firstSelected}}"  data-id="{{ $data['product']->id }}" >
                                                 {{ get_varient_name($v) }}
                                                 <input hidden type="radio" name="options" id="option{{ $v->id }}" value="{{ $v->id }}" data-id='{{ $v->id }}' data-price='@php $tax_discounted_price = get_price_varients($v)+(get_price_varients($v)*get_pricetax_varients($data['product']->tax_percentage)/100); print number_format($tax_discounted_price,2); @endphp '
                                                 data-tax='{{ get_pricetax_varients($data['product']->tax_percentage) }}'
