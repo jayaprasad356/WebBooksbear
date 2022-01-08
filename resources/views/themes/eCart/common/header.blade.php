@@ -146,7 +146,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="{{__('msg.win_rewards_link')}}" target="_blank" class="{{ __('msg.win_rewards_link') ? 'active' : '' }}"> {{__('msg.win_rewards')}}</a>
+                                        <a href="{{__('msg.win_rewards_link')}}" target="_blank" > {{__('msg.win_rewards')}}</a>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="#">{{__('msg.more')}} </a>
@@ -594,7 +594,7 @@
                                                     </ul>
                                                 </li>
                                                 <li>
-                                                    <a href="{{__('msg.win_rewards_link')}}" target="_blank" class="{{ __('msg.win_rewards_link') ? 'active' : '' }}"> {{__('msg.win_rewards')}}</a>
+                                                    <a href="{{__('msg.win_rewards_link')}}" target="_blank" > {{__('msg.win_rewards')}}</a>
                                                 </li>
                                                 <li>
                                                     <a>{{__('msg.more')}}<em class="fa fa-angle-down"></em></a>

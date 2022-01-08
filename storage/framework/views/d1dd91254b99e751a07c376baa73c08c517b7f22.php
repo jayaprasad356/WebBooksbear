@@ -148,7 +148,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="<?php echo e(__('msg.win_rewards_link')); ?>" target="_blank" class="<?php echo e(__('msg.win_rewards_link') ? 'active' : ''); ?>"> <?php echo e(__('msg.win_rewards')); ?></a>
+                                        <a href="<?php echo e(__('msg.win_rewards_link')); ?>" target="_blank" > <?php echo e(__('msg.win_rewards')); ?></a>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="#"><?php echo e(__('msg.more')); ?> </a>
@@ -606,7 +606,7 @@
                                                     </ul>
                                                 </li>
                                                 <li>
-                                                    <a href="<?php echo e(__('msg.win_rewards_link')); ?>" target="_blank" class="<?php echo e(__('msg.win_rewards_link') ? 'active' : ''); ?>"> <?php echo e(__('msg.win_rewards')); ?></a>
+                                                    <a href="<?php echo e(__('msg.win_rewards_link')); ?>" target="_blank" > <?php echo e(__('msg.win_rewards')); ?></a>
                                                 </li>
                                                 <li>
                                                     <a><?php echo e(__('msg.more')); ?><em class="fa fa-angle-down"></em></a>
