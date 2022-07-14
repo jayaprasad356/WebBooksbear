@@ -28,7 +28,7 @@
                                                             alt="seller"></a>
                                                 </div>
                                                 <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="{{ route('seller', $s->slug ?? '-') }}">{{$s->store_name}}</a>
+                                                    <h4 class="product_name"><a href="{{ route('seller', $s->slug ?? '-') }}">{{$s->slug}}</a>
                                                     </h4>
                                                 </figcaption>
                                             </figure>

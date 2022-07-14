@@ -1,0 +1,1 @@
+<?php /**PATH C:\xampp\htdocs\bbweb\resources\views/themes/eCart/error.blade.php ENDPATH**/ ?>
